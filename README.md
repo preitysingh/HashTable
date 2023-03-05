@@ -18,9 +18,10 @@ CHALLENGE ONE: Which is a better hash function:
 * 60 % 8 = 4 
 * --> follows a pattern
 
-**Using a large prime number as n in the case where x % n is a better hash function than the other option. In this example above, the keys are increasing by 10, which is a pattern. In this case, it is obvious how prime numbers would distribute the keys better than composite numbers, which print out the answers in a pattern. However, if the keys don't have a uniform pattern, then n as a composite number would also work.**
+**Using a large prime number as n in the case where x % n is a better hash function than the other option. In this example above, the keys are increasing by 10, which is a pattern. In this case, it is obvious how prime numbers would distribute the keys better than composite numbers, which print out the answers in a pattern. However, if the keys don't have a uniform pattern, then n as a composite number would also work. With fewer factors, it is easier to avoid collisions.**
   
 
 CHALLENGE TWO: Is char values summed % 599 a good hash function for strings? Why or why not?
+**Since 599, is a really large prime number, using the x % 599 hash function would reduce the number of collisions by putting different strings under the same index.**
 
 CHALLENGE THREE: Take a look at Java's HashMap class and how it produces hashed values, then describe how it works. (You may have to look at other classes to find the actual mathematical function! Follow the trail of breadcrumbs...)
