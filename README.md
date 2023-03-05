@@ -27,5 +27,10 @@ CHALLENGE TWO: Is char values summed % 599 a good hash function for strings? Why
 
 
 CHALLENGE THREE: Take a look at Java's HashMap class and how it produces hashed values, then describe how it works. (You may have to look at other classes to find the actual mathematical function! Follow the trail of breadcrumbs...)
-**Java's HashCode function follows this formula:  s[0]*31^(n - 1) + s[1]*31^(n - 2) + ... + s[n - 1].** 
+
+Java's HashCode function follows this formula:  s[0]*31^(n - 1) + s[1]*31^(n - 2) + ... + s[n - 1]. 
+* n = the length of the string 
+* s[i] = the specific character of that string
+* the entire string of characters needs to be broken down and analyzed through the function.
+* this phrase (s[0]*31^(n - 1)) is repeated like this --> s[i]*31^(n - i+1) + s[i+1]*31^(n- i+2)+...
 
