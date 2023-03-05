@@ -9,15 +9,16 @@ CHALLENGE ONE: Which is a better hash function:
 * 40 % 11 = 6
 * 50 % 11 = 5 
 * 60 % 11 = 4
---> has varying integar answers
+* --> has varying integar answers
 * 10 % 8 = 2
 * 20 % 8 = 4
 * 30 % 8 = 6
 * 40 % 8 = 0
 * 50 % 8 = 2
 * 60 % 8 = 4 
---> follows a pattern
---Using a large prime number as n in the case where x % n is a better hash function than the other option. In this example above, the keys are increasing by 10, which is a pattern. In this case, it is obvious how prime numbers would distribute the keys better than composite numbers, which print out the answers in a pattern. However, if the keys don't have a uniform pattern, then n as a composite number would also work. 
+* --> follows a pattern
+
+**Using a large prime number as n in the case where x % n is a better hash function than the other option. In this example above, the keys are increasing by 10, which is a pattern. In this case, it is obvious how prime numbers would distribute the keys better than composite numbers, which print out the answers in a pattern. However, if the keys don't have a uniform pattern, then n as a composite number would also work.**
   
 
 CHALLENGE TWO: Is char values summed % 599 a good hash function for strings? Why or why not?
