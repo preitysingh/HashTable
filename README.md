@@ -22,6 +22,7 @@ CHALLENGE ONE: Which is a better hash function:
   
 
 CHALLENGE TWO: Is char values summed % 599 a good hash function for strings? Why or why not?
+
 **Since 599, is a really large prime number, using the x % 599 hash function would reduce the number of collisions by putting different strings under the same index. The larger the number, however, the more evenly distributed and less collisions there will be. **
 
 CHALLENGE THREE: Take a look at Java's HashMap class and how it produces hashed values, then describe how it works. (You may have to look at other classes to find the actual mathematical function! Follow the trail of breadcrumbs...)
