@@ -17,7 +17,7 @@ public class HashTable {
     //put hashes the key to an index in your array, and places the value there. Fails if there are collisions/repeat keys.
     public boolean put(String key, String value) {
         if(get(key) == null) {
-            hashTable.set(Integer.parseInt(key), value);
+            hashTable.set(hashCode(key), value);
             return true;
         } else {
             return false;
@@ -26,11 +26,16 @@ public class HashTable {
 
     //get hashes the key to get the index, and returns that element. Returns null if key not found.
     public String get(String key) {
-        return hashTable.get(Integer.parseInt(key));
+        return hashTable.get(hashCode(key));
     }
 
     //returns the unique int in the range of the [0, array length)
     private int hashCode(String key) {
-        //hashcode here
+        int hash = 0;
+        int len = key.length();
+        for (int i = 0; i < len; i++){
+            hash+= key.charAt(i-1) * 2;
+        }
+        return hash % 601;
     }
 }
